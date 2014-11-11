@@ -20,7 +20,7 @@ class DateTime
 			);
 		}
 
-		$dateTime = new \DateTime('@' . ($timeStamp ?: time()),  new \DateTimeZone('Asia/Tehran'));
+		$dateTime = new \DateTime('' . ($timeStamp ?: time()),  new \DateTimeZone('Asia/Tehran'));
 		$dateTime->setTimeZone(new \DateTimeZone('Asia/Tehran'));
 		list($jalaliYear, $jalaliMonth, $jalaliDay) = $this->toJalaliDate(
 			$year	= $dateTime->format('Y'),
